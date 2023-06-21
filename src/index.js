@@ -4,7 +4,16 @@ const app = express();
 
 const staticPath= path.join(__dirname,"../public");
 
-app.use(express.static(staticPath));
+//to set the view engine
+app.set('view engine','hbs');
+
+//template engine route
+app.get("",(req,res)=>{
+    res.render("index");
+});
+
+
+// app.use(express.static(staticPath));
 
 app.get("/",(req,res)=> {
      res.send("hello from the express js learning")
