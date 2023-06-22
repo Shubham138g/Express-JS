@@ -32,6 +32,13 @@ app.get("/",(req,res)=> {
 
 
 //how to display 404 page to user
+app.get("/about/*",(req,res)=>{
+    res.render("404",{
+        error:"opps page not found in about page"
+    })
+})
+
+
 app.get("*",(req,res)=>{
     res.render("404",{
         error:"opps page not found"
