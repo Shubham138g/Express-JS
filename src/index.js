@@ -14,6 +14,9 @@ app.set("views",templatePath);
 app.get("/",(req,res)=>{
     res.render("index");
 });
+app.get("/about",(req,res)=>{
+    res.render("about"); //here in double quote give the file name
+});
 
 
 // app.use(express.static(staticPath));
