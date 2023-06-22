@@ -3,12 +3,15 @@ const express =require ("express");
 const app = express();
 
 const staticPath= path.join(__dirname,"../public");
+const templatePath= path.join(__dirname,"../templates");
+
 
 //to set the view engine
 app.set('view engine','hbs');
+app.set("views",templatePath);
 
 //template engine route
-app.get("",(req,res)=>{
+app.get("/",(req,res)=>{
     res.render("index");
 });
 
