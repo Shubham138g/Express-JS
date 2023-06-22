@@ -30,6 +30,14 @@ app.get("/",(req,res)=> {
      res.send("hello from the express js learning")
 })
 
+
+//how to display 404 page to user
+app.get("*",(req,res)=>{
+    res.render("404",{
+        error:"opps page not found"
+    })
+})
+
 app.listen(port, ()=>{
     console.log(`server is runnig on ${port}`)
 })
