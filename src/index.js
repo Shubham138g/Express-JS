@@ -1,8 +1,8 @@
-const path=require('path');
-const express =require ("express");
-const app = express();
+const path=require('path');    //path is used to give the absolute path of the dir
+const express =require ("express"); //to require express server
+const app = express();   //to use express function
 const hbs= require('hbs');
-const port=8000;
+const port=8000; //to set the port number
 
 const staticPath= path.join(__dirname,"../public");
 const templatePath= path.join(__dirname,"../templates/views");
